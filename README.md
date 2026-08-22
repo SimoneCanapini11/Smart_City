@@ -5,6 +5,7 @@ Questo repository contiene il codice sorgente e gli script di automazione per la
 ## Struttura del Repository
 
 Il modello simulato, e le sue differenti configurazioni, sono situati all'interno della directory `Modello/`. Per ogni scenario analizzato, la rispettiva cartella contiene il motore di simulazione scritto in **C** e gli script **Python** utilizzati per automatizzare le esecuzioni, gestire i seed e raccogliere i dati.
+All'interno della cartella `Test` sono presenti diverse suite di verifica per garantire la robustezza del sistema e la coerenza dei risultati generati rispetto ai fondamenti teorici.
 
 ### Modello
 
@@ -22,8 +23,6 @@ Il modello simulato, e le sue differenti configurazioni, sono situati all'intern
 
 ### Test
 
-Contiene gli script utilizzati per garantire la correttezza logica del simulatore e la sua aderenza al modello teorico.
-
 *   **`Convergenza/`**
     *   Script per la raccolta e l'analisi dei dati necessari a valutare la fase di riscaldamento (*Warm-up*). Permette di tracciare il grafico di convergenza per assicurare il raggiungimento delle condizioni di Steady-State.
       
@@ -32,3 +31,12 @@ Contiene gli script utilizzati per garantire la correttezza logica del simulator
 
 *   **`RNG/`**
     *   Test dei Generatori di Numeri Casuali (PRNG). Verifica che le sequenze e le variate generate rispettino fedelmente le distribuzioni statistiche attese per il traffico veicolare e i tempi di servizio.
+
+*    **`Edge_Case/`**
+     *   Test della risposta del sistema in configurazioni estreme e condizioni al limite.
+
+*    **`Flow_Balance/`**
+     *   Test dedicato ad assicurare la conservazione dei job all'interno del sistema. Verifica che le entità in ingresso corrispondano esattamente alla somma di quelle in uscita e di quelle ancora in elaborazione, accertando l'assenza di drop anomali o duplicazioni impreviste.
+
+*    **`Validazione_Analitica/`**
+      *    Script di validazione che confronta i risultati empirici della simulazione con i modelli della teoria delle code. Nello specifico, la suite testa la teoria dell'utilizzazione, la legge di Little e la conservazione del tempo di permanenza.
