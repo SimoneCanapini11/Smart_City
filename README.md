@@ -20,3 +20,15 @@ Il modello simulato, e le sue differenti configurazioni, sono situati all'intern
     *   Evoluzione del modello.
     *   Implementa un Controller di Stato con logica di *Adaptive Trunk Reservation*. Include il codice per il limite dinamico dei server, il controllo a doppia soglia e il *Soft Recovery* post-crisi.
 
+### Test
+
+Contiene gli script utilizzati per garantire la correttezza logica del simulatore e la sua aderenza al modello teorico.
+
+*   **`Convergenza/`**
+    *   Script per la raccolta e l'analisi dei dati necessari a valutare la fase di riscaldamento (*Warm-up*). Permette di tracciare il grafico di convergenza per assicurare il raggiungimento delle condizioni di Steady-State.
+      
+*   **`Event_Tracing/`**
+    *   Script dedicato al tracciamento passo-passo (log) degli eventi. Raccoglie e stampa lo stato delle variabili interne del sistema per verificare a mano la corretta evoluzione logica delle code e del server.
+
+*   **`RNG/`**
+    *   Test dei Generatori di Numeri Casuali (PRNG). Verifica che le sequenze e le variate generate rispettino fedelmente le distribuzioni statistiche attese per il traffico veicolare e i tempi di servizio.
