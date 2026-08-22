@@ -5,7 +5,7 @@ Questo repository contiene il codice sorgente e gli script di automazione per la
 ## Struttura del Repository
 
 Il modello simulato, e le sue differenti configurazioni, sono situati all'interno della directory `Modello/`. Per ogni scenario analizzato, la rispettiva cartella contiene il motore di simulazione scritto in **C** e gli script **Python** utilizzati per automatizzare le esecuzioni, gestire i seed e raccogliere i dati.
-All'interno della cartella `Test` sono presenti diverse suite di verifica per garantire la robustezza del sistema e la coerenza dei risultati generati rispetto ai fondamenti teorici.
+All'interno della cartella `Test/` sono presenti diverse suite di verifica per garantire la robustezza del sistema e la coerenza dei risultati generati rispetto ai fondamenti teorici.
 
 ### Modello
 
