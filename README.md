@@ -43,3 +43,6 @@ All'interno della cartella `Test/` sono presenti diverse suite di verifica per g
 
 *   **`Indipendenza_Batch/`**
     *   Test che si occupa di calcolare l'autocorrelazione lag-1 sulle medie dei blocchi per confermare che i batch generati siano effettivamente indipendenti tra loro, e di trovare il cut-off lag validando la dimensione scelta per i batch.
+
+*   **`Numero_Repliche/`**
+    *   Script che esegue la procedura a due stadi per calcolare il numero di repliche necessarie a garantire la precisione statistica desiderata.
