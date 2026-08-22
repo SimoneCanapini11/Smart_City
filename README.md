@@ -40,3 +40,6 @@ All'interno della cartella `Test/` sono presenti diverse suite di verifica per g
 
 *    **`Validazione_Analitica/`**
       *    Script di validazione che confronta i risultati empirici della simulazione con i modelli della teoria delle code. Nello specifico, la suite testa la teoria dell'utilizzazione, la legge di Little e la conservazione del tempo di permanenza.
+
+*   **`Validazione_Analitica/`**
+    *   Test che si occupa di calcolare l'autocorrelazione lag-1 sulle medie dei blocchi per confermare che i batch generati siano effettivamente indipendenti tra loro, e di trovare il cut-off lag validando la dimensione scelta per i batch.
